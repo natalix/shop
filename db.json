@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "name": "Produkt 1",
+      "price": "20$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 2",
+      "price": "10$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 3",
+      "price": "28$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 4",
+      "price": "20$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 5",
+      "price": "2$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 6",
+      "price": "220$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 7",
+      "price": "120$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    },
+    {
+      "name": "Produkt 8",
+      "price": "50$",
+      "image": "src/assets/camera.jpeg",
+      "thumbnail": "src/assets/camera.jpeg" 
+    }
+  ]
+}

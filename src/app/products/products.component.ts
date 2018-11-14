@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ShopService } from 'src/app/shop.service';
+import { map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs/internal/Observable';
+import { sortBy } from 'lodash';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  products$: Observable<any[]>;
+
+  constructor(private service: ShopService) { }
 
   ngOnInit() {
+    this.products$ = this.service.getTableData$();
   }
 
+  sortByName(){
+    this.products$ = this.products$.pipe(
+      map(products => sortBy(products, products => products.name)),
+    );
+  }
 }

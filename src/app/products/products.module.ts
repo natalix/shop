@@ -9,7 +9,8 @@ import { ProductComponent } from './product/product.component';
     BrowserModule
   ],
   exports: [
-    ProductsComponent
+    ProductsComponent,
+    ProductComponent
   ],
   declarations: [
     ProductsComponent,

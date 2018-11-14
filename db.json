@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "name": "Produkt 1",
+      "name": "Zrodukt 1",
       "price": "20$",
       "image": "src/assets/camera.jpeg",
       "thumbnail": "src/assets/camera.jpeg" 
     },
     {
-      "name": "Produkt 2",
+      "name": "Arodukt 2",
       "price": "10$",
       "image": "src/assets/camera.jpeg",
       "thumbnail": "src/assets/camera.jpeg" 

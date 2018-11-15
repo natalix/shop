@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item',
@@ -12,8 +12,11 @@ export class ItemComponent implements OnInit {
   constructor() { }
 
   increment() {
-    
-    console.log(this.product.quantity);
+    this.product.quantity += 1;
+  }
+
+  decrement() {
+    this.product.quantity -= 1;
   }
 
   ngOnInit() {

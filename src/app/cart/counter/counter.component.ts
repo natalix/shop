@@ -8,16 +8,18 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class CounterComponent implements OnInit {
 
   @Input() quantity;
-  
+
   @Output() increment = new EventEmitter<any>();
-  
+  @Output() decrement = new EventEmitter<any>();
+
   constructor() { }
 
   incrementClick() {
     this.increment.emit();
   }
 
-  decrement() {
+  decrementClick() {
+    this.decrement.emit();
   }
 
   ngOnInit() {

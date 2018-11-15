@@ -9,7 +9,7 @@ export class SortComponent implements OnInit {
 
   @Output() sortByName = new EventEmitter<any>();
   @Output() sortByPrice = new EventEmitter<any>();
-  
+
   constructor() { }
 
   sortByNameClick() {

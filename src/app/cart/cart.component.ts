@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { CartService } from 'src/app/cart/cart.service';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',
@@ -21,14 +20,15 @@ export class CartComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.buttonName = 'rozwiń';
-    this.cart$ = this.cartService.cart$
-    .pipe(
-      tap(console.log)
-    );
-
-    this.cart$.subscribe();
+    this.cart$ = this.cartService.cart$;
+    this.cart$
+      .subscribe(
+        x => { if (x.length) {this.changeButtonName()}}));
+    this.cart$.subscribe(x => console.log(x));
   }
 
   ngOnChanges() {
+    this.cartService.refreshTotalCartCount();
+
   }
 }

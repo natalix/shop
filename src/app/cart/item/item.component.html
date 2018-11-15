@@ -1,7 +1,8 @@
 <img [src]="product.thumbnail" [alt]="product.name">
-<p>{{product}}</p>
+<p>{{product.name}}</p>
 <app-counter
-  (quantity)="product.quantity"
-  (increment)="increment()">
+  [quantity]="product.quantity"
+  (increment)="increment()"
+  (decrement)="decrement()">
 </app-counter>
 <p>{{product.price}}$</p>

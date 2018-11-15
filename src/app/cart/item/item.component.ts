@@ -11,6 +11,11 @@ export class ItemComponent implements OnInit {
 
   constructor() { }
 
+  increment() {
+    
+    console.log(this.product.quantity);
+  }
+
   ngOnInit() {
   }
 }

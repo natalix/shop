@@ -28,10 +28,18 @@ export class CartService {
   constructor() { }
 
   addProductToCart(product) {
-    const cartItem = new CartItem(product)
+    const cartItem = new CartItem(product);
+    let isPresentInCart = false;
     console.log(cartItem);
-    const cartItems = this._cart$.getValue()
-  
-    this._cart$.next([...cartItems, cartItem]);
+    const cartItems = this._cart$.getValue();
+    
+    cartItems.forEach(item => {
+      if(item.id === product.id) {
+        item.increaseQuantity();
+        isPresentInCart = true;
+      }
+    });
+
+    return isPresentInCart ? this._cart$.next([...cartItems]) : this._cart$.next([...cartItems, cartItem]);
   }
 }

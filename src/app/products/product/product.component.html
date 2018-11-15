@@ -1,4 +1,4 @@
 <p>{{product.name}}</p>
 <p>{{product.price}}$</p>
-<img src="{{product.image}}" alt="{{product.name}}">
+<img [src]="product.image" [alt]="product.name">
 <button (click)="addToCart(product)">Dodaj do koszyka</button>

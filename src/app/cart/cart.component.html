@@ -1,3 +1,7 @@
-<p>
-  cart works!
-</p>
+<button (click)="changeButtonName()">{{ buttonName | titlecase }} koszyk</button>
+<div *ngIf="(cart$ | async) as cart">
+  <app-item 
+    *ngFor="let product of cart"
+    [product]="product">
+  </app-item>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sort',
@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortComponent implements OnInit {
 
+  @Output() sortByName = new EventEmitter<any>();
+  @Output() sortByPrice = new EventEmitter<any>();
+  
   constructor() { }
+
+  sortByNameClick() {
+    this.sortByName.emit();
+  }
+
+  sortByPriceClick() {
+    this.sortByPrice.emit();
+  }
 
   ngOnInit() {
   }

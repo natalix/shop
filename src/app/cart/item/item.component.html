@@ -1,3 +1,6 @@
-<p>
-  item works!
-</p>
+<img src="{{product.thumbnail}}" alt="{{product.name}}">
+<p>{{product.name}}</p>
+<app-counter
+  (increment)="product.prototype.increaseQuantity()">
+</app-counter>
+<p>{{product.price}}$</p>

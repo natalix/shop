@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ShopService } from 'src/app/shop.service';
-import { map, tap } from 'rxjs/operators';
+import { ProductsService } from 'src/app/products/products.service';
 import { Observable } from 'rxjs/internal/Observable';
-import { sortBy } from 'lodash';
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -13,15 +12,23 @@ export class ProductsComponent implements OnInit {
 
   products$: Observable<any[]>;
 
-  constructor(private service: ShopService) { }
+  constructor(
+    private productsService: ProductsService,
+    private cartService: CartService) { }
 
   ngOnInit() {
-    this.products$ = this.service.getTableData$();
+    this.products$ = this.productsService.getProductData$();
   }
 
-  sortByName(){
-    this.products$ = this.products$.pipe(
-      map(products => sortBy(products, products => products.name)),
-    );
+  sortByName() {
+    this.products$ = this.productsService.getProductSortedByName();
+  }
+
+  sortByPrice() {
+    this.products$ = this.productsService.getProductSortedByPrice();
+  }
+
+  addToCart(product) {
+    this.cartService.addProductToCart(product);
   }
 }

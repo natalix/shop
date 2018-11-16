@@ -1,7 +1,20 @@
-<button (click)="changeButtonName()">{{ buttonName | titlecase }} koszyk</button>
-<div *ngIf="(cart$ | async) as cart">
-  <app-item 
-    *ngFor="let product of cart"
-    [product]="product">
-  </app-item>
+<button 
+  (click)="changeButtonName()">
+  {{ buttonName | titlecase }} koszyk
+</button>
+<div 
+  *ngIf="(cart$ | async) as cart"
+  class="hidden"
+  [ngClass]="{'visible': toggle === true}"
+  [ngSwitch]="toggle">
+    <p *ngSwitchCase="true">Brak produktów w koszyku</p>
+    <div *ngSwitchCase="false">
+      <app-item 
+        *ngFor="let product of cart"
+        [product]="product"
+        (increment)="increment($event)"
+        (decrement)="decrement($event)">
+      </app-item>
+    </div>
+    <p>Suma: {{ summaryPrice$ | async }} zł</p>
 </div>

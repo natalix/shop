@@ -29,6 +29,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product) {
-    this.cartService.addProductToCart(product);
+    this.cartService.dispatch({ type: 'ADD_PRODUCT', payload: product });
   }
 }

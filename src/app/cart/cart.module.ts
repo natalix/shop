@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart.component';
 import { ItemComponent } from './item/item.component';
-import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   imports: [
@@ -13,8 +12,7 @@ import { CounterComponent } from './counter/counter.component';
   ],
   declarations: [
     CartComponent,
-    ItemComponent,
-    CounterComponent
+    ItemComponent
   ]
 })
 export class CartModule { }

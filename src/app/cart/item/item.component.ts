@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { CartService } from 'src/app/cart/cart.service';
 
 @Component({
   selector: 'app-item',
@@ -9,14 +10,17 @@ export class ItemComponent implements OnInit {
 
   @Input() product;
 
+  @Output() increment = new EventEmitter<any>();
+  @Output() decrement = new EventEmitter<any>();
+
   constructor() { }
 
-  increment() {
-    this.product.quantity += 1;
+  incrementClick() {
+    this.increment.emit(this.product);
   }
 
-  decrement() {
-    this.product.quantity -= 1;
+  decrementClick() {
+    this.decrement.emit(this.product);
   }
 
   ngOnInit() {

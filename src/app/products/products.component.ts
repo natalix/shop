@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/products/products.service';
 import { Observable } from 'rxjs/internal/Observable';
 import { CartService } from 'src/app/cart/cart.service';
+import { CartItemModel } from '../model/cart-item.interface';
 
 @Component({
   selector: 'app-products',
@@ -10,25 +11,25 @@ import { CartService } from 'src/app/cart/cart.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products$: Observable<any[]>;
+  products$: Observable<CartItemModel[]>;
 
   constructor(
     private productsService: ProductsService,
     private cartService: CartService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.products$ = this.productsService.getProductData$();
   }
 
-  sortByName() {
+  sortByName(): void {
     this.products$ = this.productsService.getProductSortedByName();
   }
 
-  sortByPrice() {
+  sortByPrice(): void {
     this.products$ = this.productsService.getProductSortedByPrice();
   }
 
-  addToCart(product) {
+  addToCart(product: CartItemModel): void {
     this.cartService.dispatch({ type: 'ADD_PRODUCT', payload: product });
   }
 }

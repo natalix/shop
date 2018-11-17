@@ -22,4 +22,20 @@ describe('SortComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit sortByName', () => {
+    const spy = spyOn(component.sortByName, 'emit');
+
+    component.sortByNameClick();
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should emit sortByPrice', () => {
+    const spy = spyOn(component.sortByPrice, 'emit');
+
+    component.sortByPriceClick();
+
+    expect(spy).toHaveBeenCalled();
+  });
 });

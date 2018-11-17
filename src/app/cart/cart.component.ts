@@ -17,29 +17,29 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
 
-  toggle() {
+  toggle(): void {
     this.buttonName === 'rozwiń' ?  this.show() : this.hide();
   }
 
-  show() {
+  show(): void {
     this.isShown = true;
     this.buttonName = 'ukryj';
   }
 
-  hide() {
+  hide(): void {
     this.isShown = false;
     this.buttonName = 'rozwiń';
   }
 
-  increment(product) {
+  increment(product): void {
     this.cartService.dispatch({ type: 'ADD_PRODUCT', payload: product });
   }
 
-  decrement(product) {
-    this.cartService.dispatch({ type: 'REMOVE_PRODUCT', payload: product });
+  decrement(product): void {
+    this.cartService.dispatch({ type: 'REMOVE_PRODUCT', payload: product.id });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cart$ = this.cartService.cart$;
     this.summaryPrice$ = this.cartService.sumCart();
     this.summaryPrice$.subscribe(x => {if (x > 0) { this.show(); }});

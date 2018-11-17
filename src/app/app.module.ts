@@ -18,7 +18,6 @@ import { CoreModule } from 'src/app/core/core.module';
     CartModule,
     CoreModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

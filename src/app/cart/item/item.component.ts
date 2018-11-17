@@ -1,28 +1,22 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { CartService } from 'src/app/cart/cart.service';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss']
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent {
 
   @Input() product;
 
   @Output() increment = new EventEmitter<any>();
   @Output() decrement = new EventEmitter<any>();
 
-  constructor() { }
-
-  incrementClick() {
+  incrementClick(): void {
     this.increment.emit(this.product);
   }
 
-  decrementClick() {
+  decrementClick(): void {
     this.decrement.emit(this.product);
-  }
-
-  ngOnInit() {
   }
 }

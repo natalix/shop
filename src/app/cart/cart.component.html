@@ -1,14 +1,13 @@
 <button 
-  (click)="changeButtonName()">
+  (click)="toggle()">
   {{ buttonName | titlecase }} koszyk
 </button>
 <div 
   *ngIf="(cart$ | async) as cart"
   class="hidden"
-  [ngClass]="{'visible': toggle === true}"
-  [ngSwitch]="toggle">
-    <p *ngSwitchCase="true">Brak produktów w koszyku</p>
-    <div *ngSwitchCase="false">
+  [ngClass]="{'visible': isShown === true}">
+    <p *ngIf="cart.length === 0">Brak produktów w koszyku</p>
+    <div>
       <app-item 
         *ngFor="let product of cart"
         [product]="product"

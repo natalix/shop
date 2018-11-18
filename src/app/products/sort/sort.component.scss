@@ -1,0 +1,52 @@
+@import 'src/sass/styles';
+
+.sort-chevron, .sort-options-btn {
+	transition: all 0.35s ease-in-out;
+}
+
+.sort-wrapper {
+	position: relative;
+	width: 100px;
+}
+
+.sort-toggle {
+	display: flex;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.sort-toggle:hover .sort-chevron {
+	color: rgb(158, 189, 106);
+}
+
+.sort-header {
+	margin-right: 20px;
+}
+
+.sort-options {
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+}
+
+.sort-options-btn {
+	outline: none;
+	font-family: $roboto-slab-regular;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 0;
+	border: none;
+	background-color: inherit;
+}
+
+.sort-options-item:hover .sort-options-btn {
+	color: rgb(158, 189, 106);
+}
+
+.sort-options-item {
+	display: none;
+}
+
+.sort-wrapper:hover .sort-options-item {
+	display: block;
+}

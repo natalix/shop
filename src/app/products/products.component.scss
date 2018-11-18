@@ -1,0 +1,20 @@
+@import 'src/sass/styles';
+
+.products-heading-row{
+    font-family: $roboto-slab-bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.products-header {
+    font-size: 24px;
+    margin-right: 100px;
+}
+
+.products-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

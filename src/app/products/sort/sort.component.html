@@ -1,7 +1,22 @@
-<div class="">
-  <p>Sortuj</p>
-  <ul class="">
-    <li><button (click)="sortByPriceClick()">Cena</button></li>
-    <li><button (click)="sortByNameClick()">Nazwa</button></li>
+<div class="sort-wrapper">
+  <div class="sort-toggle">
+    <h5 class="sort-header">Sortuj</h5>
+    <fa class="sort-chevron" name="chevron-down"></fa>
+  </div>
+  <ul class="sort-options">
+    <li class="sort-options-item">
+      <button 
+        class="sort-options-btn" 
+        (click)="sortByPriceClick()">
+        Cena
+      </button>
+    </li>
+    <li class="sort-options-item">
+      <button 
+        class="sort-options-btn" 
+        (click)="sortByNameClick()">
+        Nazwa
+      </button>
+    </li>
   </ul>
 </div>

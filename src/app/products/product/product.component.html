@@ -1,8 +1,23 @@
-<div class="product">
-  <p>{{product.price }} zł</p>
-  <img 
-    class="product-img"
-    [src]="product.image" 
-    [alt]="product.name">
-  <button (click)="addToCart(product)">Dodaj do koszyka</button>
-</div> <p>{{product.name}}</p>
+<div class="product-wrapper">
+  <div class="product-wrapper-img">
+    <img 
+      class="product-img"
+      [src]="product.image" 
+      [alt]="product.name">
+    <div class="hover-content"> 
+      <button class="product-btn">
+        <fa name="heart"></fa>
+      </button>
+      <button class="product-btn" (click)="addToCart(product)">
+        <fa name="shopping-cart"></fa>
+      </button>
+      <button class="product-btn">
+        <fa name="search"></fa>
+      </button>
+    </div>
+  </div>
+  <div class="product-wrapper-details">
+    <h4 class="product-name">{{product.name}}</h4>
+    <p class="product-price">{{product.price }} zł</p>
+  </div>
+</div>

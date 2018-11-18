@@ -1,6 +1,9 @@
 <button 
   (click)="toggle()">
   {{ buttonName | titlecase }} koszyk
+  <span>
+    <fa name="shopping-cart"></fa>
+  </span>
 </button>
 <div 
   *ngIf="(cart$ | async) as cart"

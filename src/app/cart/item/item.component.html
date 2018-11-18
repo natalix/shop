@@ -1,8 +1,23 @@
-<img [src]="product.thumbnail" [alt]="product.name">
-<p>{{product.name}}</p>
-<div>
-  <div>{{ product.quantity }}</div>
-  <button (click)="incrementClick()">+</button>
-  <button (click)="decrementClick()">-</button>
+<div class="cart-item">
+  <img 
+    class="cart-item-img" 
+    [src]="product.thumbnail" 
+    [alt]="product.name">
+  <p class="cart-item-name">{{product.name}}</p>
+  <div class="cart-item-quantity">
+    {{ product.quantity }}
+  </div>
+  <div class="cart-item-btn-wrapper">
+    <button 
+      (click)="incrementClick()"
+      class="btn-reset btn-hover">
+        <fa name="chevron-up"></fa>
+    </button>
+    <button 
+      (click)="decrementClick()" 
+      class="btn-reset btn-hover">
+        <fa name="chevron-down"></fa>
+    </button>
+  </div>
+  <p class="cart-item-price">{{product.price }} zł</p>
 </div>
-<p>{{product.price }} zł</p>

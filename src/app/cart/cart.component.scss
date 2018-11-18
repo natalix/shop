@@ -1,8 +1,47 @@
+@import 'src/sass/styles';
+
+@import 'src/sass/common-styles';
+
+@include button-reset;
+
+.cart-content {
+  font-family: $roboto-slab-regular;
+  font-size: 14px;
+  padding: 20px 0 0 5px;
+  max-width: 400px;
+}
+
 .hidden {
   display: none;
- 
 }
 
 .visible {
   display: block;
+}
+
+.cart-btn {
+  border: 1px solid $ligth-grey-color;
+  color: $dark-main;
+  font-family: $roboto-slab-bold;
+  font-size: 16px;
+  padding: 15px 30px;
+  width: 200px;
+}
+
+.cart-btn:hover {
+  border: 1px solid $hover-color;
+}
+
+.cart-sum {
+  border-top: solid 1px $ligth-grey-color;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 60px 0;
+  padding-top: 8px;
+}
+
+.sum-price {
+  font-weight: bold;
+  text-align: right;
+  width: 60px;
 }

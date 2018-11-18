@@ -1,4 +1,34 @@
-img {
+@import 'src/sass/common-styles';
+@import 'src/sass/variables';
+
+@include button-reset;
+
+.cart-item {
+  align-items: center;
+  display: flex;
+  margin: 10px 0;
+}
+
+.cart-item-img {
   height: 50px;
   width: auto;
+}
+
+.cart-item-name {
+  margin: 0 20px;
+  width: 100px;
+}
+
+.cart-item-quantity {
+  width: 15px;
+}
+
+.cart-item-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  margin-left: 20px;
 }

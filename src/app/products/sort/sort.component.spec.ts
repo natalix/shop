@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SortComponent } from './sort.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 describe('SortComponent', () => {
   let component: SortComponent;
@@ -8,7 +9,12 @@ describe('SortComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SortComponent ]
+      declarations: [
+        SortComponent
+      ],
+      imports: [
+        AngularFontAwesomeModule
+      ]
     })
     .compileComponents();
   }));

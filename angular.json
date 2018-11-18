@@ -80,6 +80,7 @@
               "src/sass/styles.scss"
             ],
             "scripts": [],
+            "sourceMap": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"

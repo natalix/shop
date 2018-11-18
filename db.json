@@ -3,58 +3,58 @@
     {
       "id": 1,
       "name": "Aparat",
-      "price": 320,
+      "price": 1800,
       "image": "src/assets/images/camera.jpeg",
-      "thumbnail": "src/assets/images/camera.jpeg" 
+      "thumbnail": "src/assets/images/camera-thumbnail.jpg" 
     },
     {
       "id": 2,
       "name": "Pióro wieczne",
-      "price": 125,
+      "price": 450,
       "image": "src/assets/images/pen.jpeg",
-      "thumbnail": "src/assets/images/pen.jpeg" 
+      "thumbnail": "src/assets/images/pen-thumbnail.jpg" 
     },
     {
       "id": 3,
       "name": "Zegarek",
-      "price": 280,
+      "price": 980,
       "image": "src/assets/images/watch.jpeg",
-      "thumbnail": "src/assets/images/watch.jpeg" 
+      "thumbnail": "src/assets/images/watch-thumbnail.jpg" 
     },
     {
       "id": 4,
       "name": "Pierścionek",
-      "price": 170,
+      "price": 1600,
       "image": "src/assets/images/ring.jpeg",
-      "thumbnail": "src/assets/images/ring.jpeg" 
+      "thumbnail": "src/assets/images/ring-thumbnail.jpg" 
     },
     {
       "id": 5,
       "name": "Krzesło",
-      "price": 200,
+      "price": 550,
       "image": "src/assets/images/chair.jpeg",
-      "thumbnail": "src/assets/images/chair.jpeg" 
+      "thumbnail": "src/assets/images/chair-thumbnail.jpg" 
     },
     {
       "id": 6,
       "name": "Kwiat",
-      "price": 65,
+      "price": 85,
       "image": "src/assets/images/plant.jpeg",
-      "thumbnail": "src/assets/images/plant.jpeg"  
+      "thumbnail": "src/assets/images/plant-thumbnail.jpg"  
     },
     {
       "id": 7,
       "name": "Sofa",
-      "price": 1200,
+      "price": 2200,
       "image": "src/assets/images/sofa.jpeg",
-      "thumbnail": "src/assets/images/sofa.jpeg" 
+      "thumbnail": "src/assets/images/sofa-thumbnail.jpg" 
     },
     {
       "id": 8,
       "name": "Lampka",
-      "price": 150,
+      "price": 3800,
       "image": "src/assets/images/lamp.jpeg",
-      "thumbnail": "src/assets/images/lamp.jpeg" 
+      "thumbnail": "src/assets/images/lamp-thumbnail.jpg" 
     }
   ]
 }

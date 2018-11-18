@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart/cart.service';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',

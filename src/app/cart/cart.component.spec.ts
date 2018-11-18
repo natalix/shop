@@ -4,6 +4,7 @@ import { CartComponent } from './cart.component';
 import { ItemComponent } from './item/item.component';
 import { CartService } from './cart.service';
 import { CartItemModel } from '../model/cart-item.interface';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 describe('CartComponent', () => {
   let component: CartComponent;
@@ -26,6 +27,9 @@ describe('CartComponent', () => {
       ],
       providers: [
         CartService
+      ],
+      imports: [
+        AngularFontAwesomeModule
       ]
     })
     .compileComponents();

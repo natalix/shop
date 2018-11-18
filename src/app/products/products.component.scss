@@ -1,20 +1,20 @@
 @import 'src/sass/styles';
 
-.products-heading-row{
-    font-family: $roboto-slab-bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+.products-heading-row {
+	align-items: center;
+	display: flex;
+	font-family: $roboto-slab-bold;
+	justify-content: center;
+	margin: 20px 0 50px 0;
 }
 
 .products-header {
-    font-size: 24px;
-    margin-right: 100px;
+	font-size: 24px;
+	margin-right: 100px;
 }
 
 .products-row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }

@@ -10,7 +10,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     AngularFontAwesomeModule
   ],
   exports: [
-    CartComponent
+    CartComponent,
+    AngularFontAwesomeModule
   ],
   declarations: [
     CartComponent,

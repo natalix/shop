@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ItemComponent } from './item.component';
 import { CartItemModel } from 'src/app/model/cart-item.interface';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 describe('ItemComponent', () => {
   let component: ItemComponent;
@@ -16,7 +17,10 @@ describe('ItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ItemComponent ]
+      declarations: [ ItemComponent ],
+      imports: [
+        AngularFontAwesomeModule
+      ]
     })
     .compileComponents();
   }));

@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { ProductsService } from './products.service';
 import { CartService } from '../cart/cart.service';
 import { CartItemModel } from '../model/cart-item.interface';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -25,7 +26,8 @@ describe('ProductsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        AngularFontAwesomeModule
       ],
       declarations: [
         ProductsComponent,

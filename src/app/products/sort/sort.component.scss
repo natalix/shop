@@ -1,7 +1,10 @@
-@import 'src/sass/styles';
+@import 'src/sass/common-styles';
+@import 'src/sass/variables';
 
-.sort-chevron, .sort-options-btn {
-	transition: all 0.35s ease-in-out;
+@include button-reset;
+
+.sort-toggle, .sort-options-btn {
+	transition: all 0.2s ease;
 }
 
 .sort-wrapper {
@@ -11,36 +14,31 @@
 
 .sort-toggle {
 	display: flex;
-	font-size: 18px;
 	cursor: pointer;
+	font-size: 18px;
 }
 
-.sort-toggle:hover .sort-chevron {
-	color: rgb(158, 189, 106);
+.sort-toggle:hover {
+	color: $hover-color;
 }
 
 .sort-header {
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .sort-options {
 	position: absolute;
-	cursor: pointer;
 	width: 100%;
 }
 
 .sort-options-btn {
-	outline: none;
 	font-family: $roboto-slab-regular;
 	font-size: 14px;
-	cursor: pointer;
 	padding: 0;
-	border: none;
-	background-color: inherit;
 }
 
 .sort-options-item:hover .sort-options-btn {
-	color: rgb(158, 189, 106);
+	color: $hover-color;
 }
 
 .sort-options-item {
